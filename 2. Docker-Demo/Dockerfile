@@ -1,3 +1,3 @@
-FROM tomcat:10-jdk17
-ADD target/Docker-Demo-2.7.3.jar springboot-docker-demo.jar
-ENTRYPOINT ["java","-jar","springboot-docker-demo.jar"]
+FROM openjdk:11
+ADD target/*.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
